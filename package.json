@@ -1,0 +1,11 @@
+{
+    "name": "sushi-ajax",
+    "private": true,
+    "description": "request module built for sushi ripped out and packaged up for simpler consumption on it's own.",
+    "dependencies": {
+        "underscore": "*"        
+    },
+    "devDependencies": { 
+    	"mocha": "*"
+    }
+}
