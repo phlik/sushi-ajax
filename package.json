@@ -1,11 +1,24 @@
 {
     "name": "sushi-ajax",
-    "private": true,
+    "version" : "0.1.1",    
     "description": "request module built for sushi ripped out and packaged up for simpler consumption on it's own.",
+    "author":"Erin Houston <erinhouston@gmail.com>",
+    "contributors" : [
+		{ "name" : "James R. White" },
+		{ "name" : "Alexander Marinenko" },
+		{ "name" : "Erin Houston" }
+	],
+	"repository" : "https://github.com/phlik/sushi-ajax.git",
+	"keywords" : [
+		"isomorphic",
+		"request",
+		"browserify"
+	],
     "dependencies": {
         "underscore": "*"        
     },
     "devDependencies": { 
     	"mocha": "*"
-    }
+    },
+    "license" : "MIT"
 }
