@@ -1,8 +1,20 @@
 var http = require('http');
-http.createServer(function (req, res) {
+http.createServer(function (req, res) {	
 	if(req.url === '/test'){
-		res.writeHead(200, {'Content-Type': 'text/plain'});
-  		res.end('Hello World\n');		
+		if(req.method === "POST"){
+			var dat = "";
+			req.on('data', function(chunk){
+				dat += chunk;
+			});
+			req.on('end', function(){
+				res.writeHead(200, {'Content-Type': req.headers["content-type"] || 'text/plain' });
+				res.end(dat);				
+			});
+			
+		} else {
+			res.writeHead(200, {'Content-Type': 'text/plain'});
+  			res.end('Hello World\n');			
+		}				
 	} else if (req.url === '/error'){
 		res.writeHead(501, {'Content-Type': 'text/plain'});
 		res.end('error message here\n');		
